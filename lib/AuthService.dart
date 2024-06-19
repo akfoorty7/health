@@ -1,8 +1,9 @@
 
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart';
 import 'package:health_app/main.dart';
 
-class AuthService{
+class AuthService with ChangeNotifier {
   final FirebaseAuth _auth = FirebaseAuth.instance;
 
   //Sign up with email and Password

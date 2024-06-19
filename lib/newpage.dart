@@ -2,7 +2,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:health_app/FormPage.dart';
-import 'package:health_app/e-admit.dart';
 import 'package:health_app/emergency.dart';
 import 'package:health_app/incident.dart';
 import 'package:health_app/login.dart';
@@ -39,7 +38,9 @@ class NewPage extends StatelessWidget {
                         onTap: (){
                           ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("No New Notifications!")));
                         } ,
-                          child: Image.asset('assets/notification-fill.png',scale: 2.5,)),
+                          child: GestureDetector(
+                            onTap: null,
+                              child: Image.asset('assets/notification-fill.png',scale: 2.5,))),
                     ),
                   ],
                 ),
@@ -143,7 +144,7 @@ class NewPage extends StatelessWidget {
                         children: [
                           GestureDetector(
                             onTap: (){
-                              Navigator.push(context, MaterialPageRoute(builder: (context) =>Eadmit() ));
+                              Navigator.push(context, MaterialPageRoute(builder: (context) =>MyImagePickerScreen() ));
                             },
                               child: Image.asset("assets/Frame 61.png",scale: 2.5,)),
                           Text("e-admit form"),
@@ -163,7 +164,7 @@ class NewPage extends StatelessWidget {
                 ),
               ),
               ElevatedButton(onPressed: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context) => LoginPage()));
+                Navigator.pop(context, MaterialPageRoute(builder: (context) => LoginPage()));
 
               }, child: Text("Log Out")),
 

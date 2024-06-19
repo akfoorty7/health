@@ -28,6 +28,7 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return
       Scaffold(
+        backgroundColor: Colors.white,
       // appBar: AppBar(
       //         Positioned(
       //           top: 0,
@@ -57,6 +58,7 @@ class _LoginPageState extends State<LoginPage> {
                 top: 60,
                 left: 0,
                 right: 0,
+                bottom: 0,
                 child: SizedBox(
                   height: MediaQuery.of(context).size.height,
                   child: Image.asset(
