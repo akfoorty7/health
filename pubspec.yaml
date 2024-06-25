@@ -48,6 +48,10 @@ dependencies:
   sqflite: ^2.0.0+4
   path_provider: ^2.0.11
   flutter_local_notifications:
+  google_maps_flutter: ^2.1.1
+  geolocator: ^9.0.2
+  http:
+  intl:
 
 
 

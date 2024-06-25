@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:health_app/health_tracker.dart';
 import 'package:provider/provider.dart';
 import 'AuthService.dart';
 import 'FormPage.dart';
@@ -126,7 +127,7 @@ class NewPage extends StatelessWidget {
                         children: [
                           GestureDetector(
                             onTap: () {
-                              Navigator.push(context, MaterialPageRoute(builder: (context) => MyImagePickerScreen()));
+                              Navigator.push(context, MaterialPageRoute(builder: (context) => HealthTracker()));
                             },
                             child: Image.asset("assets/Frame 61.png", scale: 2.5),
                           ),
