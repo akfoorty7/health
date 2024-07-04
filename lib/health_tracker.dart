@@ -23,9 +23,9 @@ class _HealthTrackerState extends State<HealthTracker> {
           TextField(
             controller: bpController,
             decoration: InputDecoration(
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(25)
-              )
+                border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(25)
+                )
             ),
 
           ),

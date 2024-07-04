@@ -52,6 +52,8 @@ dependencies:
   geolocator: ^9.0.2
   http:
   intl:
+  just_audio: ^0.9.18
+  get:
 
 
 

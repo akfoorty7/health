@@ -339,22 +339,22 @@ class _Page2State extends State<Page2> {
                             //   });
                             // },
                             child: Icon(c)),
-                          labelText: 'Password',
-                          labelStyle: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w500,
-                            color: Color(0xff3F6652),
-                          ),
-                          border: InputBorder.none,
-                          enabledBorder: InputBorder.none,
-                          focusedBorder: InputBorder.none,
-                          contentPadding: EdgeInsets.only(
-                              left: 28,
-                              right: 16), // Adjust content padding as needed
-                          prefixIconConstraints: BoxConstraints(
-                            minWidth:
-                            0, // Set the minimum width to 0 to align with the start of the TextFormField
-                          ),
+                        labelText: 'Password',
+                        labelStyle: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500,
+                          color: Color(0xff3F6652),
+                        ),
+                        border: InputBorder.none,
+                        enabledBorder: InputBorder.none,
+                        focusedBorder: InputBorder.none,
+                        contentPadding: EdgeInsets.only(
+                            left: 28,
+                            right: 16), // Adjust content padding as needed
+                        prefixIconConstraints: BoxConstraints(
+                          minWidth:
+                          0, // Set the minimum width to 0 to align with the start of the TextFormField
+                        ),
                       ),
                     ),
                   ),
@@ -373,37 +373,37 @@ class _Page2State extends State<Page2> {
                       controller: scpassword,
                       obscureText: a, // To hide the password
                       decoration:  InputDecoration(
-                          prefixIcon: Icon(Icons.lock,color: Color(0xff3F6652),),
-                          suffix: GestureDetector(
-                              onTap: () {
-                                setState(() {
-                                  a = !a;
-                                  c = a == false ? Icons.visibility : Icons.visibility_off;
-                                });
-                              },
-                              // onDoubleTap: () {
-                              //   setState(() {
-                              //     a = !a;
-                              //     c = Icons.visibility_off;
-                              //   });
-                              // },
-                              child: Icon(c)),
-                          labelText: 'Confirm Password',
-                          labelStyle: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w500,
-                            color: Color(0xff3F6652),
-                          ),
-                          border: InputBorder.none,
-                          enabledBorder: InputBorder.none,
-                          focusedBorder: InputBorder.none,
-                          contentPadding: EdgeInsets.only(
-                              left: 28,
-                              right: 16), // Adjust content padding as needed
-                          prefixIconConstraints: BoxConstraints(
-                            minWidth:
-                            0, // Set the minimum width to 0 to align with the start of the TextFormField
-                          ),
+                        prefixIcon: Icon(Icons.lock,color: Color(0xff3F6652),),
+                        suffix: GestureDetector(
+                            onTap: () {
+                              setState(() {
+                                a = !a;
+                                c = a == false ? Icons.visibility : Icons.visibility_off;
+                              });
+                            },
+                            // onDoubleTap: () {
+                            //   setState(() {
+                            //     a = !a;
+                            //     c = Icons.visibility_off;
+                            //   });
+                            // },
+                            child: Icon(c)),
+                        labelText: 'Confirm Password',
+                        labelStyle: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500,
+                          color: Color(0xff3F6652),
+                        ),
+                        border: InputBorder.none,
+                        enabledBorder: InputBorder.none,
+                        focusedBorder: InputBorder.none,
+                        contentPadding: EdgeInsets.only(
+                            left: 28,
+                            right: 16), // Adjust content padding as needed
+                        prefixIconConstraints: BoxConstraints(
+                          minWidth:
+                          0, // Set the minimum width to 0 to align with the start of the TextFormField
+                        ),
 
                       ),
                     ),

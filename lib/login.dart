@@ -29,17 +29,17 @@ class _LoginPageState extends State<LoginPage> {
     return
       Scaffold(
         backgroundColor: Colors.white,
-      // appBar: AppBar(
-      //         Positioned(
-      //           top: 0,
-      //           left: 0,
-      //           right: 0,
-      //           child: Image.asset(
-      //             "assets/images/plant.jpg", // Background
-      //             fit: BoxFit.cover,
-      //           ),
-      //
-      // ),
+        // appBar: AppBar(
+        //         Positioned(
+        //           top: 0,
+        //           left: 0,
+        //           right: 0,
+        //           child: Image.asset(
+        //             "assets/images/plant.jpg", // Background
+        //             fit: BoxFit.cover,
+        //           ),
+        //
+        // ),
         body: SingleChildScrollView(
           child: Stack(
             children: [
@@ -143,7 +143,7 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                       ),
                     ),
-          
+
                     const SizedBox(height: 30),
                     Center(
                       child: Container(
@@ -173,35 +173,35 @@ class _LoginPageState extends State<LoginPage> {
                                 //   });
                                 // },
                                 child: Icon(c)),
-                              labelText: 'Password',
-                              labelStyle: TextStyle(
-                                fontSize: 16,
-                                fontWeight: FontWeight.w500,
-                                color: Color(0xff3F6652),
-                              ),
-                              border: InputBorder.none,
-                              enabledBorder: InputBorder.none,
-                              focusedBorder: InputBorder.none,
-                              contentPadding: EdgeInsets.only(
-                                  left: 28,
-                                  right: 16), // Adjust content padding as needed
-                              prefixIconConstraints: BoxConstraints(
-                                minWidth:
-                                0, // Set the minimum width to 0 to align with the start of the TextFormField
-                              ),
-                              // prefixIcon: Padding(
-                              //   padding: EdgeInsets.only(
-                              //       right:
-                              //       10), // Adjust right padding for space between icon and text
-                              //   child: Icon(
-                              //     Icons.lock, // Replace with the shield icon you have available
-                              //     color: Color(0xff3F6652),
-                              //   ),
-                              // ),
+                            labelText: 'Password',
+                            labelStyle: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w500,
+                              color: Color(0xff3F6652),
+                            ),
+                            border: InputBorder.none,
+                            enabledBorder: InputBorder.none,
+                            focusedBorder: InputBorder.none,
+                            contentPadding: EdgeInsets.only(
+                                left: 28,
+                                right: 16), // Adjust content padding as needed
+                            prefixIconConstraints: BoxConstraints(
+                              minWidth:
+                              0, // Set the minimum width to 0 to align with the start of the TextFormField
+                            ),
+                            // prefixIcon: Padding(
+                            //   padding: EdgeInsets.only(
+                            //       right:
+                            //       10), // Adjust right padding for space between icon and text
+                            //   child: Icon(
+                            //     Icons.lock, // Replace with the shield icon you have available
+                            //     color: Color(0xff3F6652),
+                            //   ),
+                            // ),
 
+                          ),
                         ),
                       ),
-                    ),
                     ),
                     Container(
                       padding: const EdgeInsets.only(top: 6),
@@ -236,7 +236,7 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                     ),
 
-          
+
                     Container(
                       margin: const EdgeInsets.only(top: 75),
                       child: Center(
@@ -290,9 +290,9 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                         ),
                       ),
-          
+
                     ),
-          
+
                     Padding(
                       padding: const EdgeInsets.only(top:7,),
                       child: Row(
@@ -322,183 +322,183 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                     )
 
-                    ],
+                  ],
                 ),
               ),
             ],
           ),
         ),
 
-      // body: SafeArea(
-      //   child: Center(
-      //     child: SingleChildScrollView(
-      //       child: Column(
-      //         children: [
-      //           Padding(
-      //             padding: const EdgeInsets.all(8.0),
-      //             child: Image.asset('assets/logo.png', scale: 3.45,),
-      //           ),
-      //           SizedBox(
-      //             height: 20,
-      //           ),
-      //           Text(
-      //             'Log In', style: TextStyle(color: Colors.red, fontSize: 24),),
-      //           SizedBox(
-      //             height: 70,
-      //           ),
-      //
-      //           Padding(
-      //             padding: const EdgeInsets.all(10),
-      //             child: TextFormField(
-      //               key: _formKey,
-      //               validator: (value){
-      //                 if(value!.isEmpty){
-      //                   return "required";
-      //                 }
-      //               },
-      //               controller: usernamecontroller,
-      //               keyboardType: TextInputType.text,
-      //               enableSuggestions: true,
-      //               autocorrect: false,
-      //               decoration: InputDecoration(
-      //                 prefixIcon: Icon(Icons.person),
-      //                 hintText: 'Email',
-      //                 border: OutlineInputBorder(
-      //                     borderRadius: BorderRadius.circular(24)
-      //                 ),
-      //               ),
-      //             ),
-      //           ),
-      //           Padding(
-      //             padding: const EdgeInsets.all(10),
-      //             child: TextField(
-      //               controller: passwordcontroller,
-      //               obscureText: a,
-      //               enableSuggestions: false,
-      //               autocorrect: false,
-      //               decoration: InputDecoration(
-      //                 prefixIcon: Icon(Icons.lock),
-      //                 suffix: GestureDetector(
-      //                     onTap: () {
-      //                       setState(() {
-      //                         a = !a;
-      //                         c = a == false ? Icons.visibility : Icons.visibility_off;
-      //                       });
-      //                     },
-      //                     child: Icon(c)),
-      //                 hintText: 'Password',
-      //                 border: OutlineInputBorder(
-      //                   borderRadius: BorderRadius.circular(24),
-      //                 ),
-      //               ),
-      //             ),
-      //           ),
-      //           Row(
-      //             mainAxisAlignment: MainAxisAlignment.end,
-      //             children: [
-      //               GestureDetector(
-      //                   onTap: () {
-      //                     setState(() {
-      //                       // Navigator.push(context, MaterialPageRoute(
-      //                       //     builder: (context) => ForgotPassword()));
-      //                     });
-      //                   },
-      //                   child: Text('Forgot Password?',
-      //                     style: TextStyle(color: Colors.blue),)),
-      //             ],
-      //           ),
-      //           SizedBox(
-      //             height: 10,
-      //           ),
-      //           ElevatedButton(
-      //             onPressed: () async{
-      //               String result = await AuthService().signIn(usernamecontroller.text, passwordcontroller.text);
-      //               if(result == "Success"){
-      //                 Navigator.pushReplacement(context, MaterialPageRoute(
-      //                     builder: (context) =>
-      //                         NewPage(usernamecontroller.text, passwordcontroller.text)
-      //                 ),
-      //                 );
-      //               }else{
-      //                 ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Login Failed")));
-      //               }
-      //               setState(() {
-      //                 print(usernamecontroller.text);
-      //                 print(passwordcontroller.text);
-      //                 // if (usernamecontroller.text == 'Devid' &&
-      //                 //     passwordcontroller.text == '123456' ||usernamecontroller.text == 'ak47' && passwordcontroller.text == '1234') {
-      //                 //
-      //                 //   Navigator.pushReplacement(context, MaterialPageRoute(
-      //                 //       builder: (context) =>
-      //                 //           HomePage()
-      //                 //   ),
-      //                 //   );
-      //                 //   // usernamecontroller.clear();
-      //                 //   // passwordcontroller.clear();
-      //                 // }
-      //                 // else {
-      //                 //   ScaffoldMessenger.of(context).showSnackBar(
-      //                 //     const SnackBar(
-      //                 //         content: Text('Invalid User Credentials')),
-      //                 //   );
-      //                 // }
-      //               });
-      //
-      //             },
-      //             // {
-      //             //   setState(() {
-      //             //     print(usernamecontroller.text);
-      //             //     print(passwordcontroller.text);
-      //             //     if (usernamecontroller.text == 'Devid' &&
-      //             //         passwordcontroller.text == '123456' || usernamecontroller.text == 'manisha' && passwordcontroller.text == '12345' || usernamecontroller.text == 'ak47' && passwordcontroller.text == '1234') {
-      //             //
-      //             //       Navigator.push(context, MaterialPageRoute(
-      //             //           builder: (context) =>
-      //             //               NewPage(usernamecontroller.text,
-      //             //                   passwordcontroller.text)),
-      //             //       );
-      //             //       // usernamecontroller.clear();
-      //             //       // passwordcontroller.clear();
-      //             //     }
-      //             //     else {
-      //             //       ScaffoldMessenger.of(context).showSnackBar(
-      //             //         const SnackBar(
-      //             //             content: Text('Invalid User Credentials')),
-      //             //       );
-      //             //     }
-      //             //   });
-      //             // },
-      //             child: Text('Log In'),
-      //
-      //           ),
-      //           SizedBox(
-      //             height: 10,
-      //           ),
-      //           Row(
-      //             mainAxisAlignment: MainAxisAlignment.center,
-      //             children: [
-      //               Text("Don't have an account? "),
-      //               GestureDetector(
-      //                 onTap: () {
-      //                   setState(() {
-      //                     Navigator.push(context,
-      //                       MaterialPageRoute(builder: (context) => Page2()),
-      //                     );
-      //                   });
-      //                 },
-      //                 child: Text(
-      //                   'Sign up?', style: TextStyle(color: Colors.blue),
-      //                 ),
-      //               )
-      //             ],
-      //           ),
-      //
-      //         ],
-      //       ),
-      //     ),
-      //   ),
-      // ),
-    );
+        // body: SafeArea(
+        //   child: Center(
+        //     child: SingleChildScrollView(
+        //       child: Column(
+        //         children: [
+        //           Padding(
+        //             padding: const EdgeInsets.all(8.0),
+        //             child: Image.asset('assets/logo.png', scale: 3.45,),
+        //           ),
+        //           SizedBox(
+        //             height: 20,
+        //           ),
+        //           Text(
+        //             'Log In', style: TextStyle(color: Colors.red, fontSize: 24),),
+        //           SizedBox(
+        //             height: 70,
+        //           ),
+        //
+        //           Padding(
+        //             padding: const EdgeInsets.all(10),
+        //             child: TextFormField(
+        //               key: _formKey,
+        //               validator: (value){
+        //                 if(value!.isEmpty){
+        //                   return "required";
+        //                 }
+        //               },
+        //               controller: usernamecontroller,
+        //               keyboardType: TextInputType.text,
+        //               enableSuggestions: true,
+        //               autocorrect: false,
+        //               decoration: InputDecoration(
+        //                 prefixIcon: Icon(Icons.person),
+        //                 hintText: 'Email',
+        //                 border: OutlineInputBorder(
+        //                     borderRadius: BorderRadius.circular(24)
+        //                 ),
+        //               ),
+        //             ),
+        //           ),
+        //           Padding(
+        //             padding: const EdgeInsets.all(10),
+        //             child: TextField(
+        //               controller: passwordcontroller,
+        //               obscureText: a,
+        //               enableSuggestions: false,
+        //               autocorrect: false,
+        //               decoration: InputDecoration(
+        //                 prefixIcon: Icon(Icons.lock),
+        //                 suffix: GestureDetector(
+        //                     onTap: () {
+        //                       setState(() {
+        //                         a = !a;
+        //                         c = a == false ? Icons.visibility : Icons.visibility_off;
+        //                       });
+        //                     },
+        //                     child: Icon(c)),
+        //                 hintText: 'Password',
+        //                 border: OutlineInputBorder(
+        //                   borderRadius: BorderRadius.circular(24),
+        //                 ),
+        //               ),
+        //             ),
+        //           ),
+        //           Row(
+        //             mainAxisAlignment: MainAxisAlignment.end,
+        //             children: [
+        //               GestureDetector(
+        //                   onTap: () {
+        //                     setState(() {
+        //                       // Navigator.push(context, MaterialPageRoute(
+        //                       //     builder: (context) => ForgotPassword()));
+        //                     });
+        //                   },
+        //                   child: Text('Forgot Password?',
+        //                     style: TextStyle(color: Colors.blue),)),
+        //             ],
+        //           ),
+        //           SizedBox(
+        //             height: 10,
+        //           ),
+        //           ElevatedButton(
+        //             onPressed: () async{
+        //               String result = await AuthService().signIn(usernamecontroller.text, passwordcontroller.text);
+        //               if(result == "Success"){
+        //                 Navigator.pushReplacement(context, MaterialPageRoute(
+        //                     builder: (context) =>
+        //                         NewPage(usernamecontroller.text, passwordcontroller.text)
+        //                 ),
+        //                 );
+        //               }else{
+        //                 ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Login Failed")));
+        //               }
+        //               setState(() {
+        //                 print(usernamecontroller.text);
+        //                 print(passwordcontroller.text);
+        //                 // if (usernamecontroller.text == 'Devid' &&
+        //                 //     passwordcontroller.text == '123456' ||usernamecontroller.text == 'ak47' && passwordcontroller.text == '1234') {
+        //                 //
+        //                 //   Navigator.pushReplacement(context, MaterialPageRoute(
+        //                 //       builder: (context) =>
+        //                 //           HomePage()
+        //                 //   ),
+        //                 //   );
+        //                 //   // usernamecontroller.clear();
+        //                 //   // passwordcontroller.clear();
+        //                 // }
+        //                 // else {
+        //                 //   ScaffoldMessenger.of(context).showSnackBar(
+        //                 //     const SnackBar(
+        //                 //         content: Text('Invalid User Credentials')),
+        //                 //   );
+        //                 // }
+        //               });
+        //
+        //             },
+        //             // {
+        //             //   setState(() {
+        //             //     print(usernamecontroller.text);
+        //             //     print(passwordcontroller.text);
+        //             //     if (usernamecontroller.text == 'Devid' &&
+        //             //         passwordcontroller.text == '123456' || usernamecontroller.text == 'manisha' && passwordcontroller.text == '12345' || usernamecontroller.text == 'ak47' && passwordcontroller.text == '1234') {
+        //             //
+        //             //       Navigator.push(context, MaterialPageRoute(
+        //             //           builder: (context) =>
+        //             //               NewPage(usernamecontroller.text,
+        //             //                   passwordcontroller.text)),
+        //             //       );
+        //             //       // usernamecontroller.clear();
+        //             //       // passwordcontroller.clear();
+        //             //     }
+        //             //     else {
+        //             //       ScaffoldMessenger.of(context).showSnackBar(
+        //             //         const SnackBar(
+        //             //             content: Text('Invalid User Credentials')),
+        //             //       );
+        //             //     }
+        //             //   });
+        //             // },
+        //             child: Text('Log In'),
+        //
+        //           ),
+        //           SizedBox(
+        //             height: 10,
+        //           ),
+        //           Row(
+        //             mainAxisAlignment: MainAxisAlignment.center,
+        //             children: [
+        //               Text("Don't have an account? "),
+        //               GestureDetector(
+        //                 onTap: () {
+        //                   setState(() {
+        //                     Navigator.push(context,
+        //                       MaterialPageRoute(builder: (context) => Page2()),
+        //                     );
+        //                   });
+        //                 },
+        //                 child: Text(
+        //                   'Sign up?', style: TextStyle(color: Colors.blue),
+        //                 ),
+        //               )
+        //             ],
+        //           ),
+        //
+        //         ],
+        //       ),
+        //     ),
+        //   ),
+        // ),
+      );
   }
 }
 
