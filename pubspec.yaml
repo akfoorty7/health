@@ -53,7 +53,7 @@ dependencies:
   http:
   intl:
   just_audio: ^0.9.18
-  get:
+  get: ^4.6.5
 
 
 

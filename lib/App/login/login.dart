@@ -1,11 +1,13 @@
 
 
 import 'package:flutter/material.dart';
-import 'package:health_app/forgetpassword.dart';
-import 'package:health_app/newpage.dart';
-import 'package:health_app/signup.dart';
+import 'package:health_app/App/login/forgetpassword.dart';
+import 'package:health_app/App/home/View/newpage.dart';
+import 'package:health_app/App/signup/signup.dart';
+import 'package:health_app/admin/api/phone_login.dart';
+import 'package:health_app/admin/view/admin.view.dart';
 
-import 'AuthService.dart';
+import '../../API/AuthService.dart';
 
 
 
@@ -111,6 +113,7 @@ class _LoginPageState extends State<LoginPage> {
                           color: const Color(0xffc9e3d5),
                         ),
                         child: TextFormField(
+                          style: TextStyle(color: Colors.black),
                           controller: usernamecontroller,
                           decoration: const InputDecoration(
                             labelText: 'Email',
@@ -155,6 +158,7 @@ class _LoginPageState extends State<LoginPage> {
                           color: const Color(0xffc8e3d4),
                         ),
                         child: TextFormField(
+                          style: TextStyle(color: Colors.black),
                           controller: passwordcontroller,
                           obscureText: a, // To hide the password
                           decoration:  InputDecoration(
@@ -307,7 +311,7 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                           GestureDetector(
                             onTap: () {
-                              Navigator.push(context, MaterialPageRoute(builder: (context) =>  Page2()));
+                              Navigator.push(context, MaterialPageRoute(builder: (context) =>  SignUp()));
                             },
                             child: const Text(
                                 " Sign up",
@@ -320,6 +324,17 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                         ],
                       ),
+                    ),
+                    SizedBox(height: 20,),
+                    GestureDetector(
+                      onTap: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=> AdminView()));
+                      },
+                      child: Container(
+                        child: Text("Login As Admin", style: TextStyle(fontSize: 13.5,
+                            fontWeight: FontWeight.w500,
+                            color: Color(0xff3F6652)),),
+                      ),
                     )
 
                   ],
@@ -328,176 +343,6 @@ class _LoginPageState extends State<LoginPage> {
             ],
           ),
         ),
-
-        // body: SafeArea(
-        //   child: Center(
-        //     child: SingleChildScrollView(
-        //       child: Column(
-        //         children: [
-        //           Padding(
-        //             padding: const EdgeInsets.all(8.0),
-        //             child: Image.asset('assets/logo.png', scale: 3.45,),
-        //           ),
-        //           SizedBox(
-        //             height: 20,
-        //           ),
-        //           Text(
-        //             'Log In', style: TextStyle(color: Colors.red, fontSize: 24),),
-        //           SizedBox(
-        //             height: 70,
-        //           ),
-        //
-        //           Padding(
-        //             padding: const EdgeInsets.all(10),
-        //             child: TextFormField(
-        //               key: _formKey,
-        //               validator: (value){
-        //                 if(value!.isEmpty){
-        //                   return "required";
-        //                 }
-        //               },
-        //               controller: usernamecontroller,
-        //               keyboardType: TextInputType.text,
-        //               enableSuggestions: true,
-        //               autocorrect: false,
-        //               decoration: InputDecoration(
-        //                 prefixIcon: Icon(Icons.person),
-        //                 hintText: 'Email',
-        //                 border: OutlineInputBorder(
-        //                     borderRadius: BorderRadius.circular(24)
-        //                 ),
-        //               ),
-        //             ),
-        //           ),
-        //           Padding(
-        //             padding: const EdgeInsets.all(10),
-        //             child: TextField(
-        //               controller: passwordcontroller,
-        //               obscureText: a,
-        //               enableSuggestions: false,
-        //               autocorrect: false,
-        //               decoration: InputDecoration(
-        //                 prefixIcon: Icon(Icons.lock),
-        //                 suffix: GestureDetector(
-        //                     onTap: () {
-        //                       setState(() {
-        //                         a = !a;
-        //                         c = a == false ? Icons.visibility : Icons.visibility_off;
-        //                       });
-        //                     },
-        //                     child: Icon(c)),
-        //                 hintText: 'Password',
-        //                 border: OutlineInputBorder(
-        //                   borderRadius: BorderRadius.circular(24),
-        //                 ),
-        //               ),
-        //             ),
-        //           ),
-        //           Row(
-        //             mainAxisAlignment: MainAxisAlignment.end,
-        //             children: [
-        //               GestureDetector(
-        //                   onTap: () {
-        //                     setState(() {
-        //                       // Navigator.push(context, MaterialPageRoute(
-        //                       //     builder: (context) => ForgotPassword()));
-        //                     });
-        //                   },
-        //                   child: Text('Forgot Password?',
-        //                     style: TextStyle(color: Colors.blue),)),
-        //             ],
-        //           ),
-        //           SizedBox(
-        //             height: 10,
-        //           ),
-        //           ElevatedButton(
-        //             onPressed: () async{
-        //               String result = await AuthService().signIn(usernamecontroller.text, passwordcontroller.text);
-        //               if(result == "Success"){
-        //                 Navigator.pushReplacement(context, MaterialPageRoute(
-        //                     builder: (context) =>
-        //                         NewPage(usernamecontroller.text, passwordcontroller.text)
-        //                 ),
-        //                 );
-        //               }else{
-        //                 ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Login Failed")));
-        //               }
-        //               setState(() {
-        //                 print(usernamecontroller.text);
-        //                 print(passwordcontroller.text);
-        //                 // if (usernamecontroller.text == 'Devid' &&
-        //                 //     passwordcontroller.text == '123456' ||usernamecontroller.text == 'ak47' && passwordcontroller.text == '1234') {
-        //                 //
-        //                 //   Navigator.pushReplacement(context, MaterialPageRoute(
-        //                 //       builder: (context) =>
-        //                 //           HomePage()
-        //                 //   ),
-        //                 //   );
-        //                 //   // usernamecontroller.clear();
-        //                 //   // passwordcontroller.clear();
-        //                 // }
-        //                 // else {
-        //                 //   ScaffoldMessenger.of(context).showSnackBar(
-        //                 //     const SnackBar(
-        //                 //         content: Text('Invalid User Credentials')),
-        //                 //   );
-        //                 // }
-        //               });
-        //
-        //             },
-        //             // {
-        //             //   setState(() {
-        //             //     print(usernamecontroller.text);
-        //             //     print(passwordcontroller.text);
-        //             //     if (usernamecontroller.text == 'Devid' &&
-        //             //         passwordcontroller.text == '123456' || usernamecontroller.text == 'manisha' && passwordcontroller.text == '12345' || usernamecontroller.text == 'ak47' && passwordcontroller.text == '1234') {
-        //             //
-        //             //       Navigator.push(context, MaterialPageRoute(
-        //             //           builder: (context) =>
-        //             //               NewPage(usernamecontroller.text,
-        //             //                   passwordcontroller.text)),
-        //             //       );
-        //             //       // usernamecontroller.clear();
-        //             //       // passwordcontroller.clear();
-        //             //     }
-        //             //     else {
-        //             //       ScaffoldMessenger.of(context).showSnackBar(
-        //             //         const SnackBar(
-        //             //             content: Text('Invalid User Credentials')),
-        //             //       );
-        //             //     }
-        //             //   });
-        //             // },
-        //             child: Text('Log In'),
-        //
-        //           ),
-        //           SizedBox(
-        //             height: 10,
-        //           ),
-        //           Row(
-        //             mainAxisAlignment: MainAxisAlignment.center,
-        //             children: [
-        //               Text("Don't have an account? "),
-        //               GestureDetector(
-        //                 onTap: () {
-        //                   setState(() {
-        //                     Navigator.push(context,
-        //                       MaterialPageRoute(builder: (context) => Page2()),
-        //                     );
-        //                   });
-        //                 },
-        //                 child: Text(
-        //                   'Sign up?', style: TextStyle(color: Colors.blue),
-        //                 ),
-        //               )
-        //             ],
-        //           ),
-        //
-        //         ],
-        //       ),
-        //     ),
-        //   ),
-        // ),
       );
   }
 }

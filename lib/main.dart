@@ -1,11 +1,12 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:provider/provider.dart';
-import 'AuthService.dart';
-import 'login.dart';
-import 'firebase_api.dart';
-import 'newpage.dart';
+import 'API/AuthService.dart';
+import 'App/login/login.dart';
+import 'API/firebase_api.dart';
+import 'App/home/View/newpage.dart';
 
 late final FirebaseApp app;
 late final FirebaseAuth auth;
@@ -30,9 +31,10 @@ class HealthApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       theme: ThemeData.light(),
       darkTheme: ThemeData.dark(),
+      themeMode: ThemeMode.system,
       debugShowCheckedModeBanner: false,
       home: AuthWrapper(),
     );

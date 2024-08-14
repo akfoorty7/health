@@ -75,4 +75,5 @@ dependencies {
     implementation 'com.google.firebase:firebase-analytics'
     // Add the Firebase Cloud Messaging dependency
     implementation 'com.google.firebase:firebase-messaging:21.0.0'
+    implementation 'com.google.android.gms:play-services-safetynet:17.0.1'
 }

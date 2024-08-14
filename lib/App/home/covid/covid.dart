@@ -5,7 +5,9 @@ import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
-import 'newpage.dart';
+import '../View/newpage.dart';
+
+
 
 class MyImagePickerScreen extends StatefulWidget {
   @override
@@ -16,9 +18,7 @@ class _MyImagePickerScreenState extends State<MyImagePickerScreen> {
   final ImagePicker _imagePicker = ImagePicker();
   File? _selectedImage;
 
-  Reference storageReference = FirebaseStorage.instance
-      .ref()
-      .child('images');
+  Reference storageReference = FirebaseStorage.instance.ref().child('images');
 
 
   // Form fields
@@ -36,8 +36,7 @@ class _MyImagePickerScreenState extends State<MyImagePickerScreen> {
     }
   }
 
-  Future<void> uploadImageToFirebaseStorage(
-      File imagePath) async {
+  Future<void> uploadImageToFirebaseStorage(File imagePath) async {
     try {
 
       var uploadTask = storageReference.child('${DateTime.now()}.jpg').putFile(imagePath);

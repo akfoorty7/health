@@ -13,7 +13,6 @@ class PushNotification extends StatelessWidget {
       body: Center(
         child: ElevatedButton(
           onPressed: () {
-            // Example of showing a snackbar using GetX
             Get.snackbar(
               'Notification',
               'You received a new notification!',

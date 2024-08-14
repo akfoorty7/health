@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:health_app/newpage.dart';
+import 'package:health_app/App/home/View/newpage.dart';
 
 class Incident extends StatelessWidget {
   // const Report({super.key});
